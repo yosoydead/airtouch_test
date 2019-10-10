@@ -36,13 +36,13 @@ class CurrencyConverter(rates: List<Rate>) {
         }
 
         visited[from] = true
-        println("visited: ${from}")
+//        println("visited: ${from}")
 
         var connectedNodes = graph.nodes(from)
         for(item in connectedNodes){
             if(visited[item] != true){
                 var convertedResult = sum * graph.weight(from, item)
-                println("convertedResult: $convertedResult")
+//                println("convertedResult: $convertedResult")
                 findValue(convertedResult, item, to, visited)
             }
         }

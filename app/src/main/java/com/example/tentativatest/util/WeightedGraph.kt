@@ -15,18 +15,17 @@ class WeightedGraph {
             graph[firstNode] = mutableMapOf<String, Float>()
         }
         graph[firstNode]!![secondNode] = weight
-        println("${firstNode} -> ${secondNode}, weight: ${weight}")
+//        println("${firstNode} -> ${secondNode}, weight: ${weight}")
     }
 
     fun nodes(node: String): Array<String>{
-//        return graph[node]?.keys ?: arrayOf<String>()
-        var bla = graph[node]?.keys
+        var list = graph[node]?.keys
 
-        return bla?.toTypedArray() ?: arrayOf<String>()
+        return list?.toTypedArray() ?: arrayOf<String>()
     }
 
     fun weight(firstNode: String, secondNode: String): Float{
-        println("Getting weight from: ${firstNode} to ${secondNode}")
+//        println("Getting weight from: ${firstNode} to ${secondNode}")
         var weight = graph[firstNode]!![secondNode]
 
         return weight ?: throw Exception()
